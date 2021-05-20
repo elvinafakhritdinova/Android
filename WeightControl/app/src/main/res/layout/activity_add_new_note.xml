@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundAll"
+    android:orientation="vertical"
+    tools:context=".AddNewNote">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bac"
+            android:onClick="backInMain" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/editDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Выберите дату"
+            android:inputType="phone"
+            android:textColor="@color/myblue"
+            android:textColorHint="@color/background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editWeight"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Введите вес"
+            android:inputType="phone"
+            android:textColor="@color/myblue"
+            android:textColorHint="@color/background"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/butAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button"
+            android:drawableLeft="@mipmap/add_icon_129463"
+            android:onClick="addLessonToDB"
+            android:text="Добавить"
+            android:textColor="@color/backgroundAll"
+            app:backgroundTint="@color/background" />
+
+        <Button
+            android:id="@+id/butDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button"
+            android:drawableLeft="@mipmap/trash"
+            android:onClick="deleteLessonFromDB"
+            android:text="Удалить"
+            android:textColor="@color/backgroundAll"
+            app:backgroundTint="@color/background" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundAll"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".AllNotes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bac"
+            android:onClick="backInMain" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/notes7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7 записей"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/background"
+                android:textColorHighlight="@color/background1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:buttonTint="@color/background1"
+                app:useMaterialThemeColors="false" />
+
+            <RadioButton
+                android:id="@+id/notes30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="30 записей"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/background"
+                android:textStyle="bold"
+                app:buttonTint="@color/background1" />
+
+            <RadioButton
+                android:id="@+id/notesall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="все записи"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/background"
+                android:textStyle="bold"
+                app:buttonTint="@color/background1" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:focusableInTouchMode="false"
+        android:foreground="@android:drawable/ic_input_add"
+        android:onClick="inAdd"
+        app:backgroundTint="@color/background1"
+        app:fabSize="normal" />
+
+</LinearLayout>
