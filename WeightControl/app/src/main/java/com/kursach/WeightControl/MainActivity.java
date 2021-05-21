@@ -166,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-//TODO подумать о активном весе, график при одной записи какая то хуйня, вывод рекомендаций по имт, и дизайн блеать!
     public void installSettingsInMainActivity() {
         mSettings = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
         try {
